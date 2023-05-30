@@ -1,0 +1,39 @@
+{
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./tests/**/*.tsx"
+  ],
+  "exclude": [
+    "./dist",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/module": ["./src/module/index.ts"],
+      "@/components/*": ["./src/module/components/*"],
+      "@/interfaces/*": ["./src/module/interfaces/*"],
+      "@/enums/*": ["./src/module/enums/*"],
+      "@/icons/*": ["./src/module/icons/*"],
+      "@/constants/*": ["./src/module/constants/*"]
+    }
+  }
+}
